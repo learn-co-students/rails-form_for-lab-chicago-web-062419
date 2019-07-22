@@ -46,3 +46,774 @@ Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
   [1m[35mSQL (0.6ms)[0m  DELETE FROM "students" WHERE "students"."id" = ?  [["id", 2]]
   [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
   [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-22 21:56:59.950609"], ["updated_at", "2019-07-22 21:56:59.950609"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSchoolClasses (20190722215929)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "school_classes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "room_number" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190722215929"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/cats/new" for ::1 at 2019-07-22 17:15:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/cats/new"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered collection of /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [16 times] (14.2ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.1ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (17.6ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (227.7ms)
+Started GET "/students" for ::1 at 2019-07-22 17:15:20 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for StudentsController):
+  
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.7.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.8ms)
+Started GET "/students" for ::1 at 2019-07-22 17:16:04 -0500
+Processing by StudentsController#index as HTML
+Completed 406 Not Acceptable in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (StudentsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.7.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (166.8ms)
+Started GET "/students" for ::1 at 2019-07-22 17:16:41 -0500
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1459ms (Views: 1455.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for ::1 at 2019-07-22 17:19:35 -0500
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 64ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/1/edit" for ::1 at 2019-07-22 17:19:44 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 80ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/edit" for ::1 at 2019-07-22 17:19:52 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 83ms (Views: 79.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/show" for ::1 at 2019-07-22 17:19:58 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for ::1 at 2019-07-22 18:22:34 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/students"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (5.9ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.1ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.2ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (205.5ms)
+Started GET "/students/new" for ::1 at 2019-07-22 18:22:50 -0500
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 458ms (Views: 438.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/students" for ::1 at 2019-07-22 18:22:59 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uuY/NEpBDu1UO7akW0tpSCCm9uiL1UO/E2rt+bEHkEdEC6VeR4BSeQIYG5dkqHuJ5QPEt7Uu11zWKhnma0CBow==", "student"=>{"first_name"=>"Gelu", "last_name"=>"Voican"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Gelu"], ["last_name", "Voican"], ["created_at", "2019-07-22 23:22:59.289629"], ["updated_at", "2019-07-22 23:22:59.289629"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/4
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/students/4" for ::1 at 2019-07-22 18:22:59 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 224ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for ::1 at 2019-07-22 18:23:04 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/students"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (8.4ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (261.3ms)
+Started GET "/school_classes/new" for ::1 at 2019-07-22 18:23:15 -0500
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb within layouts/application
+  Rendered school_classes/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 44ms (Views: 29.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/school_classes" for ::1 at 2019-07-22 18:23:35 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LAbwhiFiY6tdi0d8g19mElAb5qzrX7y5s/chfruCGsHS62rsLKM/Pwuo6k+8vHTTlb7U89WkKFp2t9VhYcULJQ==", "school_class"=>{"title"=>"Networking 101", "room_number"=>"203"}, "commit"=>"Create School class"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Networking 101"], ["room_number", 203], ["created_at", "2019-07-22 23:23:35.746611"], ["updated_at", "2019-07-22 23:23:35.746611"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/4
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/school_classes/4" for ::1 at 2019-07-22 18:23:35 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 224ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/school_classes/show" for ::1 at 2019-07-22 18:23:44 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find SchoolClass with 'id'=show):
+  
+app/controllers/school_classes_controller.rb:17:in `show'
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.7ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (110.8ms)
+Started GET "/school_classes/3" for ::1 at 2019-07-22 18:23:50 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/4/edit" for ::1 at 2019-07-22 18:23:57 -0500
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb within layouts/application
+  Rendered school_classes/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/school_classes/4" for ::1 at 2019-07-22 18:24:03 -0500
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jImWfnMSQRrvhAAw7Bqvl27/ltg2Z9fSneGJbm33181yZAwUftMdjrmnrQPT+b1Wq1qkhwicQzFYoX1xt7DGKQ==", "school_class"=>{"title"=>"Networking 101", "room_number"=>"205"}, "commit"=>"Update School class", "id"=>"4"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "school_classes" SET "room_number" = ?, "updated_at" = ? WHERE "school_classes"."id" = ?[0m  [["room_number", 205], ["updated_at", "2019-07-22 23:24:03.129154"], ["id", 4]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/4
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/school_classes/4" for ::1 at 2019-07-22 18:24:03 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSchoolClass Load (0.4ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 37ms (Views: 33.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/school_classes/" for ::1 at 2019-07-22 18:24:08 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/school_classes"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (7.3ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (212.7ms)
+Started GET "/school_classes/" for ::1 at 2019-07-22 18:25:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/school_classes"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered collection of /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (10.0ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.7ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (268.4ms)
+Started GET "/rails/info/routes?path=/" for ::1 at 2019-07-22 18:26:06 -0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/", "internal"=>true}
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=/s" for ::1 at 2019-07-22 18:26:08 -0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/s", "internal"=>true}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=/stude" for ::1 at 2019-07-22 18:26:09 -0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/stude", "internal"=>true}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=/student" for ::1 at 2019-07-22 18:26:10 -0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/student", "internal"=>true}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=/student" for ::1 at 2019-07-22 18:26:12 -0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/student", "internal"=>true}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=/students" for ::1 at 2019-07-22 18:26:13 -0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/students", "internal"=>true}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/school_classes/" for ::1 at 2019-07-22 18:32:44 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/school_classes"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered collection of /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (6.7ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (233.6ms)
+Started GET "/school_classes/" for ::1 at 2019-07-22 18:32:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/school_classes"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered collection of /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (10.7ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (205.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/school_classes/" for ::1 at 2019-07-22 18:36:03 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#index as HTML
+Completed 406 Not Acceptable in 71ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (SchoolClassesController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.7.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/adrianpopan/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (302.1ms)
+Started GET "/school_classes/" for ::1 at 2019-07-22 18:37:20 -0500
+Processing by SchoolClassesController#index as HTML
+  Rendering school_classes/index.html.erb within layouts/application
+  [1m[36mSchoolClass Load (0.7ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+  Rendered school_classes/index.html.erb within layouts/application (14.7ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into String):
+    1: <div>
+    2:   <% @school_classes.each do |classes| %>
+    3:     <div><%= link_to classes.to_s, school_class_path(classes) %></div>
+    4:   <% end %>
+    5: </div>
+  
+app/models/school_class.rb:3:in `+'
+app/models/school_class.rb:3:in `to_s'
+app/views/school_classes/index.html.erb:3:in `block in _app_views_school_classes_index_html_erb__3236378626172894110_70260671384580'
+app/views/school_classes/index.html.erb:2:in `_app_views_school_classes_index_html_erb__3236378626172894110_70260671384580'
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.6ms)
+Started GET "/students" for ::1 at 2019-07-22 18:37:34 -0500
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 469ms (Views: 462.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/school_classes" for ::1 at 2019-07-22 18:37:46 -0500
+Processing by SchoolClassesController#index as HTML
+  Rendering school_classes/index.html.erb within layouts/application
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+  Rendered school_classes/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into String):
+    1: <div>
+    2:   <% @school_classes.each do |classes| %>
+    3:     <div><%= link_to classes.to_s, school_class_path(classes) %></div>
+    4:   <% end %>
+    5: </div>
+  
+app/models/school_class.rb:3:in `+'
+app/models/school_class.rb:3:in `to_s'
+app/views/school_classes/index.html.erb:3:in `block in _app_views_school_classes_index_html_erb__3236378626172894110_70260676819200'
+app/views/school_classes/index.html.erb:2:in `_app_views_school_classes_index_html_erb__3236378626172894110_70260676819200'
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.0ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/adrianpopan/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.7ms)
+Started GET "/school_classes" for ::1 at 2019-07-22 18:38:41 -0500
+Processing by SchoolClassesController#index as HTML
+  Rendering school_classes/index.html.erb within layouts/application
+  [1m[36mSchoolClass Load (0.9ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+  Rendered school_classes/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 67ms (Views: 58.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/school_classes/4" for ::1 at 2019-07-22 18:38:44 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 80ms (Views: 31.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/school_classes/1" for ::1 at 2019-07-22 18:38:47 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/2" for ::1 at 2019-07-22 18:38:48 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 37ms (Views: 32.1ms | ActiveRecord: 0.2ms)
+
+
